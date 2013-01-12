@@ -11,7 +11,8 @@ if [ ! -f ~/.freshrc ]; then
   curl -sL get.freshshell.com | bash
   source ~/.fresh/build/shell.sh
   git clone $FRESH_GIT ~/.fresh/source/$FRESH_REPO
-  ln -sf ~/.fresh/source/$FRESH_REPO/$FRESH_RC ~/.freshrc
+  rm -f ~/.freshrc
+  ln -s ~/.fresh/source/$FRESH_REPO/$FRESH_RC ~/.freshrc
 fi
 
 fresh
