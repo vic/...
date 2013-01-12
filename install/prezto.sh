@@ -11,12 +11,7 @@ SRC
 
 rm ~/.zpreztorc
 
-env FRESH_RCFILE=/dev/stdin FRESH_LOCAL=~/.zprezto FRESH_NO_BIN_CHECK=true fresh <<-EOS
-fresh runcoms/zpreztorc --file=~/.zpreztorc
-fresh vic/... zsh/prezto/zpreztorc --file=~/.zpreztorc
-EOS
-
-case $OSTYPE in 
+case $OSTYPE in
   darwin*)
     chsh -s $(which zsh)
     echo sudo chmod ugo-x /usr/libexec/path_helper
