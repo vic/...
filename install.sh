@@ -6,7 +6,7 @@ FRESH_RC="${2:-fresh/main}"
 FRESH_GIT="${3:-git://github.com/$FRESH_REPO.git}"
 
 DIR="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-echo RUNNIN on $DIR
+echo RUNNIN on $DIR from ${BASH_SOURCE[0]}
 cd
 
 if [ ! -f ~/.freshrc ]; then
