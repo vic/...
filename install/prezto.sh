@@ -9,11 +9,11 @@ for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
 done
 SRC
 
-env FRESH_RCFILE=/dev/stdin FRESH_LOCAL=~/.zprezto/ FRESH_NO_BIN_CHECK=true fresh <<-EOS
+env FRESH_RCFILE=/dev/stdin FRESH_LOCAL=~/.zprezto FRESH_NO_BIN_CHECK=true fresh <<-EOS
 rm ~/.zpreztorc
 fresh runcoms/zpreztorc
 fresh vic/... zsh/prezto/zpreztorc
-EOS 
+EOS
 
 case $OSTYPE in 
   darwin*)
