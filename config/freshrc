@@ -4,7 +4,7 @@ FRESH_LOCAL=~
 TREEDOT=~/.fresh/source/vic/...
 
 fresh freshshell/fresh bin/fresh --bin
-fresh vic/... config/slate --file
+fresh vic/... config/slate
 
 [ ! -d ~/.zprezto ] && source $TREEDOT/install/prezto.sh
 if [ -d ~/.zprezto ]; then
@@ -17,7 +17,7 @@ fi
 if [ -d ~/.spf13-vim-3 ]; then
   rm ~/.vimrc.local
   rm ~/.vimrc.bundles.local
-  fresh vic/... vim/spf13/vimrc.local --file
-  fresh vic/... vim/spf13/vimrc.bundles.local --file
+  fresh vic/... vim/spf13/vimrc.local
+  fresh vic/... vim/spf13/vimrc.bundles.local
 fi
 
