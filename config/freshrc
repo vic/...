@@ -1,1 +1,11 @@
 fresh freshshell/fresh bin/fresh --bin
+
+TREEDOT=~/.fresh/source/vic/...
+cd
+
+ 
+[ ! -d ~/.zprezto ] && source $TREEDOT/install/prezto.sh
+[ ! -d ~/.spf13-vim-3 ] && source $TREEDOT/install/spf13-vim.sh
+ 
+
+fresh vic/... config/slate --file

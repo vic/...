@@ -1,0 +1,70 @@
+set tabstop=2
+inoremap kj <Esc>
+inoremap hh <Esc>
+inoremap kk <Esc>
+inoremap jj <Esc>
+inoremap jk <Esc>
+inoremap ii <Esc>
+nnoremap ; :
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+nmap <silent> <Leader>/ :nohlsearch<CR>
+map <silent> <C-s> :NERDTree<CR><C-w>p:NERDTreeFind<CR>
+noremap H ^
+noremap L $
+noremap <left> :bp<CR>
+noremap <right> :bn<CR>
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
+if (v:version >=703)
+    set colorcolumn=80
+    hi clear ColorColumn
+    hi link ColorColumn ErrorMsg 
+endif
+set vb t_vb=
+
+set wildignore+=.git,.hg,.svn                       " Version control
+set wildignore+=*.aux,*.out,*.toc                   " LaTeX intermediate files
+set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg      " binary images
+set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest    " compiled object files
+set wildignore+=*.sw?                               " Vim swap files
+set wildignore+=.DS_Store                           " OSX
+set wildignore+=*.pyc                               " Python bytecode
+set wildignore+=classes,lib                         " Clojure / Leiningen
+set wildignore+=**/target,*.class                   " Java / Maven
+set wildignore+=Gemfile.lock
+set wildignore+=node_modules
+
+
+let g:ctrlp_match_window_bottom = 0
+let g:ctrlp_match_window_reversed = 0
+
+let g:ctrlp_extensions = ['line', 'tag']
+
+nmap <silent> <Leader>U :CtrlPUndo<CR>
+
+nmap <silent> <Leader>f :CtrlP<CR>
+nmap <silent> <Leader>F :CtrlPMRUFiles<CR>
+
+nmap <silent> <Leader>T :CtrlPBufTagAll<CR>
+nmap <silent> <Leader>t :CtrlPBufTag<CR>
+
+nmap <silent> <C-p> :CtrlPMixed<CR>
+nmap <silent> <Leader>l :CtrlPLastMode<CR>
+nmap <silent> <Leader>L :CtrlPClearCache<CR>
+
+nmap <silent> <Leader>x :CtrlPMixed<CR>
+nmap <silent> <Leader>X :CtrlPQuickfix<CR>
+
+nmap <silent> <Leader>b :CtrlPBuffer<CR>
+nmap <silent> <Leader>B :CtrlPLine<CR>
+
+if has("gui_running")
+  set guifont=Inconsolata:h14
+endif
+
+colorscheme molokai
+hi CursorLine NONE
+hi CursorLineNr guibg=darkcyan guifg=white gui=bold
+hi Cursor guibg=cyan guifg=black gui=bold

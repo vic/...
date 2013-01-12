@@ -1,0 +1,5 @@
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'nuclearsandwich/fancy-vim'
+Bundle 'vim-scripts/BufOnly.vim'
+Bundle 'leafo/moonscript-vim'
+

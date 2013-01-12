@@ -1,0 +1,85 @@
+# This is the default .slate file.
+# If no ~/.slate file exists this is the file that will be used.
+
+config defaultToCurrentScreen true
+config nudgePercentOf screenSize
+config resizePercentOf screenSize
+config secondsBetweenRepeat 0.1
+config checkDefaultsOnLoad true
+config focusCheckWidthMax 3000
+config windowHintsShowIcons true
+config windowHintsIgnoreHiddenWindows false
+#config windowHintsDuration 5
+config windowHintsSpread true
+#config windowHintsOrder persist
+config switchOrientation vertical
+config switchShowTitles true
+
+# Abstract positions
+alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
+alias lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
+alias righthalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
+alias topleft corner top-left resize:screenSizeX/2;screenSizeY/2
+alias topright corner top-right resize:screenSizeX/2;screenSizeY/2
+alias bottomleft corner bottom-left resize:screenSizeX/2;screenSizeY/2
+alias bottomright corner bottom-right resize:screenSizeX/2;screenSizeY/2
+
+# Numpad location Bindings
+bind 1:fn ${bottomleft}
+bind 2:fn push bottom bar-resize:screenSizeY/2
+bind 3:fn ${bottomright}
+bind 4:fn ${lefthalf}
+bind 5:fn ${full}
+bind 6:fn ${righthalf}
+bind 7:fn ${topleft}
+bind 8:fn push top bar-resize:screenSizeY/2
+bind 9:fn ${topright}
+
+# Resize Bindings
+#bind right:alt       resize +10% +0
+#bind left:alt        resize -10% +0
+#bind up:alt          resize +0   -10%
+#bind down:alt        resize +0   +10%
+#bind right:ctrl;alt  resize -10% +0 bottom-right
+#bind left:ctrl;alt   resize +10% +0 bottom-right
+#bind up:ctrl;alt     resize +0   +10% bottom-right
+#bind down:ctrl;alt   resize +0   -10% bottom-right
+
+# Push Bindings
+#bind right:ctrl;cmd  push right bar-resize:screenSizeX/3
+#bind left:ctrl;cmd   push left  bar-resize:screenSizeX/3
+#bind up:ctrl;cmd     push up    bar-resize:screenSizeY/2
+#bind down:ctrl;cmd   push down  bar-resize:screenSizeY/2
+
+# Nudge Bindings
+#bind right:shift;alt nudge +10% +0
+#bind left:shift;alt  nudge -10% +0
+#bind up:shift;alt    nudge +0   -10%
+#bind down:shift;alt  nudge +0   +10%
+
+# Throw Bindings
+#bind 1:ctrl;alt         throw 0 resize
+#bind 2:ctrl;alt         throw 1 resize
+#bind 3:ctrl;alt         throw 2 resize
+#bind right:ctrl;alt;cmd throw right resize
+#bind left:ctrl;alt;cmd  throw left  resize
+#bind up:ctrl;alt;cmd    throw up    resize
+#bind down:ctrl;alt;cmd  throw down  resize
+
+# Focus Bindings
+bind l:fn    focus right
+bind h:fn    focus left
+bind k:fn    focus up
+bind j:fn    focus down
+bind ;:fn    focus behind
+
+bind p:fn    hint hjklHJKLyuioYUIO
+bind ':fn    grid padding:5 0:8,4
+
+bind c:fn focus 'Google Chrome'
+bind t:fn focus 'iTerm'
+bind v:fn focus 'MacVim'
+
+bind tab:alt switch
+bind tab:fn switch
+
