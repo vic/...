@@ -9,8 +9,6 @@ for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
 done
 SRC
 
-rm ~/.zpreztorc
-
 case $OSTYPE in
   darwin*)
     chsh -s $(which zsh)
