@@ -7,15 +7,15 @@ fresh freshshell/fresh bin/fresh --bin
 
 [ ! -d ~/.zprezto ] && source $TREEDOT/install/prezto.sh
 if [ -d ~/.zprezto ]; then
-  rm ~/.zshrc
+  rm -f ~/.zshrc
   fresh .zprezto/runcoms/zshrc --file=~/.zshrc
   fresh vic/... zsh/prezto/zshrc --file=~/.zshrc
 fi
 
 [ ! -d ~/.spf13-vim-3 ] && source $TREEDOT/install/spf13-vim.sh
 if [ -d ~/.spf13-vim-3 ]; then
-  rm ~/.vimrc.local
-  rm ~/.vimrc.bundles.local
+  rm -f ~/.vimrc.local
+  rm -f ~/.vimrc.bundles.local
   fresh vic/... vim/spf13/vimrc.local
   fresh vic/... vim/spf13/vimrc.bundles.local
 fi
