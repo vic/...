@@ -1,0 +1,9 @@
+# vim: syntax=sh tw=2 sw=2:
+
+[ ! -d ~/.zprezto ] && fresh_mine_get prezto
+
+if [ -d ~/.zprezto ]; then
+  rm -f ~/.zshrc
+  fresh .zprezto/runcoms/zshrc --file=~/.zshrc
+  fresh vic/... zsh/prezto/zshrc --file=~/.zshrc
+fi

@@ -1,0 +1,25 @@
+#!/bin/bash -e
+# vim: set ts=2 sw=2 :
+
+FRESH_LOCAL=~
+FRESH_MINE=~/.fresh/source/vic/...
+
+fresh_mine (){
+  source $FRESH_MINE/fresh/$1
+}
+
+fresh_mine_get (){
+  source $FRESH_MINE/install/$1.sh
+}
+
+fresh_mine common
+
+case x$OSTYPE in
+  linux*)
+    fresh_mine linux
+    ;;
+  darwin*)
+    fresh_mine darwin
+    ;;
+esac
+
