@@ -1,1 +1,1 @@
-echo "Started Fresh"
+fresh vic/... config/freshrc --file
