@@ -15,7 +15,3 @@ if [ ! -f ~/.freshrc ]; then
 fi
 
 fresh
-
-[ -e ~/.fresh/source/$FRESH_REPO/install/missing.sh ] &&
-  FRESH_RCFILE=~/.fresh/source/$FRESH_REPO/install/missing.sh \
-  FRESH_NO_BIN_CHECK=true fresh

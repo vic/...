@@ -1,2 +1,9 @@
+#!/bin/bash -e
+# vim: set tw=2 sw=2 :
+
 fresh freshshell/fresh bin/fresh --bin
 fresh vic/... config/slate --file
+
+[ -f ~/.fresh/source/vic/.../install/missing.sh ] && \
+  source ~/.fresh/source/vic/.../install/missing.sh
+
