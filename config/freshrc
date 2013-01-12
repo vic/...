@@ -1,10 +1,9 @@
 #!/bin/bash -e
-# vim: set tw=2 :
+# vim: set ts=2 sw=2 :
 FRESH_LOCAL=~
 TREEDOT=~/.fresh/source/vic/...
 
 fresh freshshell/fresh bin/fresh --bin
-fresh vic/... config/slate
 
 [ ! -d ~/.zprezto ] && source $TREEDOT/install/prezto.sh
 if [ -d ~/.zprezto ]; then
@@ -21,3 +20,11 @@ if [ -d ~/.spf13-vim-3 ]; then
   fresh vic/... vim/spf13/vimrc.bundles.local
 fi
 
+case x$OSTYPE in
+  linux*)
+    source $TREEDOT/config/freshrc-linux
+    ;;
+  darwin*)
+    source $TREEDOT/config/freshrc-darwin
+    ;;
+esac

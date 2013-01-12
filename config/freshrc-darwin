@@ -1,0 +1,5 @@
+#!/bin/bash -e
+# vim: set ts=2 sw=2 :
+
+fresh vic/... config/slate
+
