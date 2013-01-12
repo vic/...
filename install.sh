@@ -2,7 +2,7 @@
 # vim: set ts=2 sw=2:
 
 FRESH_REPO="${1:-vic/...}"
-FRESH_RC="${2:-freshrc/main}"
+FRESH_RC="${2:-fresh/main}"
 FRESH_GIT="${3:-git://github.com/$FRESH_REPO.git}"
 
 cd
