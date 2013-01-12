@@ -1,6 +1,8 @@
 #!/bin/bash -e
 # vim: set ts=2 sw=2 :
 
+fresh freshshell/fresh bin/fresh --bin
+
 FRESH_LOCAL=~
 FRESH_MINE=~/.fresh/source/vic/...
 
@@ -15,10 +17,10 @@ fresh_mine_get (){
 fresh_mine common
 
 case x$OSTYPE in
-  linux*)
+  xlinux*)
     fresh_mine linux
     ;;
-  darwin*)
+  xdarwin*)
     fresh_mine darwin
     ;;
 esac

@@ -1,6 +1,5 @@
 #!/bin/bash -e
 # vim: tw=2 sw=2:
 
-fresh freshshell/fresh bin/fresh --bin
 fresh_mine zprezto
 fresh_mine spf13-vim
