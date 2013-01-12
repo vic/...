@@ -1,9 +1,23 @@
 #!/bin/bash -e
-# vim: set tw=2 sw=2 :
+# vim: set tw=2 :
+FRESH_LOCAL=~
+TREEDOT=~/.fresh/source/vic/...
 
 fresh freshshell/fresh bin/fresh --bin
 fresh vic/... config/slate --file
 
-[ -f ~/.fresh/source/vic/.../install/missing.sh ] && \
-  source ~/.fresh/source/vic/.../install/missing.sh
+[ ! -d ~/.zprezto ] && source $TREEDOT/install/prezto.sh
+if [ -d ~/.zprezto ]; then
+  rm ~/.zshrc
+  fresh .zprezto/runcoms/zshrc --file=~/.zshrc
+  fresh vic/... zsh/prezto/zshrc --file=~/.zshrc
+fi
+
+[ ! -d ~/.spf13-vim-3 ] && source $TREEDOT/install/spf13-vim.sh
+if [ -d ~/.spf13-vim-3 ]; then
+  rm ~/.vimrc.local
+  rm ~/.vimrc.bundles.local
+  fresh vic/... vim/spf13/vimrc.local --file
+  fresh vic/... vim/spf13/vimrc.bundles.local --file
+fi
 
