@@ -16,6 +16,6 @@ fi
 
 fresh
 
-[ -f ~/.fresh/source/$FRESH_REPO/install/missing.sh ] &&
+[ -e ~/.fresh/source/$FRESH_REPO/install/missing.sh ] &&
   FRESH_RCFILE=~/.fresh/source/$FRESH_REPO/install/missing.sh \
   FRESH_NO_BIN_CHECK=true fresh
