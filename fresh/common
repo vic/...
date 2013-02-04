@@ -5,3 +5,5 @@ fresh_mine zprezto
 fresh_mine spf13-vim
 
 fresh_vic config/gitconfig --file=~/.gitconfig
+fresh_vic config/shell --file=~/.zshrc
+fresh_vic config/shell --file=~/.bashrc

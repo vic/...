@@ -1,0 +1,8 @@
+alias cd-fresh='cd ~/.fresh/source/vic/...'
+
+alias gh=hub
+alias git=hub
+alias vi=vim
+
+export EDITOR=vim
+export PATH=$PATH:~/bin
