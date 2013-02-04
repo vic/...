@@ -3,3 +3,5 @@
 
 fresh_mine zprezto
 fresh_mine spf13-vim
+
+fresh_vic config/gitconfig --file=~/.gitconfig

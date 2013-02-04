@@ -1,0 +1,3 @@
+
+fresh_vic config/bashrc.arch --file=~/.bashrc
+fresh_vic config/xmodmaprc --file=~/.xmodmaprc

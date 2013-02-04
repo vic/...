@@ -14,7 +14,9 @@ fresh_mine_get (){
   source $FRESH_MINE/install/$1.sh
 }
 
-fresh_mine common
+fresh_vic (){
+  fresh vic/... $@
+}
 
 case x$OSTYPE in
   xlinux*)
@@ -25,3 +27,5 @@ case x$OSTYPE in
     ;;
 esac
 
+fresh_mine common
+fresh_mine ruby

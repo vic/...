@@ -4,6 +4,6 @@
 if [ -d ~/.spf13-vim-3 ]; then
   rm -f ~/.vimrc.local
   rm -f ~/.vimrc.bundles.local
-  fresh vic/... vim/spf13/vimrc.local
-  fresh vic/... vim/spf13/vimrc.bundles.local
+  fresh_vic vim/spf13/vimrc.local
+  fresh_vic vim/spf13/vimrc.bundles.local
 fi

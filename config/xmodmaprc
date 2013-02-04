@@ -1,0 +1,15 @@
+! 66 caps
+! 133 left cmd 
+! 134 right cmd
+
+!remove Mod4 = Super_L
+!clear Lock
+!keycode 66 = Control_L
+!keycode 133 = Control_L
+!add Control = Control_L
+
+remove Mod4 = Super_L
+keysym Super_L = Control_L
+remove Lock = Caps_Lock
+keysym Caps_Lock = Control_L
+add Control = Control_L

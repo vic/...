@@ -5,5 +5,5 @@
 if [ -d ~/.zprezto ]; then
   rm -f ~/.zshrc
   fresh .zprezto/runcoms/zshrc --file=~/.zshrc
-  fresh vic/... zsh/prezto/zshrc --file=~/.zshrc
+  fresh_vic zsh/prezto/zshrc --file=~/.zshrc
 fi

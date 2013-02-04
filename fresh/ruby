@@ -1,0 +1,7 @@
+#!/bin/bash -e
+# vim: tw=2 sw=2:
+
+fresh_vic config/rvm --file=~/.bashrc
+fresh_vic config/rvm --file=~/.zshrc
+
+
