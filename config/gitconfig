@@ -3,3 +3,11 @@
 	name = Victor Borja
 [push]
 	default = current
+[alias]
+	l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+	ll = log --stat --abbrev-commit
+	s = status --short --untracked-files=no
+	d = diff --word-diff=color
+[color]
+	ui = auto
+	interactive = auto
