@@ -1,3 +1,5 @@
 [user]
 	email = vborja@apache.org
 	name = Victor Borja
+[push]
+	default = current
